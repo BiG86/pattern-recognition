@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  pattern-recognition:
+    image: snorc/pattern-recognition-be:1.0.0
+    container_name: pattern-recognition
+    restart: always
+    ports:
+      - "8081:8081"
+    networks:
+      - pattern-network
+networks:
+  pattern-network:
+    name: pattern-network
